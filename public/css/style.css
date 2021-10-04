@@ -63,3 +63,8 @@ h3 {
 .copyright {
   text-align: center;
 }
+
+.center {
+  margin: 1rem auto;
+  display: block;
+} 

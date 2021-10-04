@@ -13,6 +13,10 @@ app.locals.myGames = listOfGames;
 
 app.use(express.static(__dirname + "/public"));
 app.use(router);
+// Page d'erreur 404
+app.use((req, res) => {
+  res.status(404).render('error');
+});
 
 app.listen(PORT, () => {
   console.log(`Le serveur est bien démarré sur http://localhost:${PORT}`);

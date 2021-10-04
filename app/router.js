@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
   res.render("index");
 });
 
-router.get("/game/:nameOfGame", (req, res) => {
+router.get("/game/:nameOfGame", (req, res, next) => {
   const gameName = req.params.nameOfGame;
   let foundGame;
 
@@ -24,7 +24,7 @@ router.get("/game/:nameOfGame", (req, res) => {
       gameData: foundGame,
     });
   } else {
-    res.status("404");
+    next();
   }
 });
 
