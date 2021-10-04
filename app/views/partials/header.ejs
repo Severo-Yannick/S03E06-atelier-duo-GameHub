@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+ <html lang="fr">
+
+ <head>
+  <meta charset="UTF-8">
+  <title>GameHub</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <% if (typeof extraCss !== 'undefined') { %>
+  <link rel="stylesheet" href="/css/<%= extraCss %>">
+  <% } %>
+ </head>
+
+ <body>
+   <header>
+      <h1>
+        <a href="/">GameHub</a>
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="/game/fourchette">Fourchette</a></li>
+          <li><a href="/game/diceRoller">Dice Roller</a></li>
+        </ul>
+      </nav>
+   </header> 
