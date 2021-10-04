@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <title>GameHub</title>
   <link rel="stylesheet" href="/css/style.css">
-  <% if (typeof extraCss !== 'undefined') { %>
-  <link rel="stylesheet" href="/css/<%= extraCss %>">
-  <% } %>
+  <% if (typeof gameData !== 'undefined' && gameData.cssFile) { %>
+    <link rel="stylesheet" href="/css/<%= gameData.cssFile %>">
+  <% } %>  
  </head>
 
  <body>
