@@ -10,6 +10,13 @@ app.set("view engine", "ejs");
 app.set("views", __dirname + "/app/views");
 
 app.locals.myGames = listOfGames;
+// Affichage en console la date, l'ip du user et l'url d'accès
+app.use((req, res, next) => {
+  const currentDate = new Date();
+  const isoDate = currentDate.toISOString();
+  console.log(`Date: [${isoDate} - Adresse IP: ${req.ip}] - URL: ${req.url}`);
+  next();
+});
 
 app.use(express.static(__dirname + "/public"));
 app.use(router);
